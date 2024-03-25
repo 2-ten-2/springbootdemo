@@ -6,3 +6,12 @@ spring:
     username: root
     password: 12345678
     url: jdbc:mysql://localhost:3306/springboot?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true&useSSL=false
+mybatis-plus:
+  configuration:
+    #配置MyBatis Plus的日志实现，将MyBatis Plus的日志输出到控制台
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    #启用逻辑删除功能，其中逻辑删除值为1，逻辑未删除值为0
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
